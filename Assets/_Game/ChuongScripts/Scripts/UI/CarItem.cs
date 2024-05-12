@@ -61,13 +61,13 @@ namespace ChuongCustom
                 return;
             }
 
-            if (Data.Player.Coin < _skinData.price)
+            if (Data.Player.Heart < _skinData.price)
             {
-                ToastManager.Instance.ShowMessageToast("Not enough Gem!!");
+                ToastManager.Instance.ShowMessageToast("Not enough heart!!");
                 return;
             }
 
-            Data.Player.Coin -= _skinData.price;
+            Data.Player.Heart -= _skinData.price;
             
             Data.Player.carUnlocks[_id] = 1;
             Selected();
